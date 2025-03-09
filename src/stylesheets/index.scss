@@ -1,0 +1,8 @@
+// Variable imports must always be on top
+@import '_variables';
+// Root styles 
+@import '_root';
+// Rest of the component styles
+@import 'components/search-bar.scss';
+@import 'components/multi-select-filter.scss';
+@import 'components/checkbox-list.scss';

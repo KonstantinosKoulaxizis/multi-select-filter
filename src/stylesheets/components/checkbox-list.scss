@@ -1,0 +1,26 @@
+.filter-list {
+  overflow-y: auto;
+  list-style: none;
+  height: calc(100vh - 340px);
+  padding: 0;
+
+  li {
+    margin: $spacing-5 0;
+    font-size: $font-size-4;
+
+    label {
+      display: flex;
+      align-items: center;
+
+      input {
+        margin-right: $spacing-4;
+        width: 20px;
+        height: 20px;
+      }
+
+      &::after {
+        content: '';
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+html {    
+    font-family: Arial, sans-serif;
+    background: $light-100;
+    display: flex;
+    justify-content: center;
+    padding: $spacing-5 $spacing-2;
+
+
+    body {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        #root {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+}
