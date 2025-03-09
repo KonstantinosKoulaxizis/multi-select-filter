@@ -1,9 +1,16 @@
+import { MultiSelectList, MultiSelectSearchFilter } from "./components/multi-select-filter"
+
 function App() {
 
   return (
-    <h1>
-      App
-    </h1>
+    <div className="multi-select-filter">
+      <h1>
+        Productgroep
+      </h1>
+      <MultiSelectSearchFilter />
+      <MultiSelectList />
+      <button className="apply-btn">Test</button>
+    </div>
   )
 }
 
