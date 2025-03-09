@@ -13,7 +13,7 @@ interface Props {
  */
 export const CheckboxList: FC<Props> = ({ data, onSelect }) =>
 (
-    <ul className="filter-list">
+    <ul className="checkbox-list">
         {data.map((item) => (
             <li key={item}>
                 <label>

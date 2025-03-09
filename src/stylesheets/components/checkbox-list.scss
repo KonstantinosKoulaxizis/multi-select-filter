@@ -1,8 +1,7 @@
-.filter-list {
+.checkbox-list {
   overflow-y: auto;
   list-style: none;
   padding: 0;
-  flex: 1;
 
   &::-webkit-scrollbar {
     width: 6px; 
