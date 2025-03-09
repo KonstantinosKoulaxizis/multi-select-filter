@@ -4,12 +4,12 @@ function App() {
 
   return (
     <div className="multi-select-filter">
-      <h1>
+      <h3 className="page-title">
         Productgroep
-      </h1>
+      </h3>
       <MultiSelectSearchFilter />
       <MultiSelectList />
-      <button className="apply-btn">Test</button>
+      <button className="apply-btn">Toepassen</button>
     </div>
   )
 }

@@ -5,9 +5,14 @@ $list-height: calc(100vh - 310px);
     min-width: 300px;
     max-width: 800px;
     background: $light-200;
-    padding: $spacing-5;
+    padding: $spacing-5 $spacing-8;
     border-radius: $radius-3;
     border: $spacing-05 solid $light-400;
+
+    .page-title {
+        font-size: $font-size-6;
+        font-weight: normal;
+    }
 
     .list-container {
         height: $list-height;
