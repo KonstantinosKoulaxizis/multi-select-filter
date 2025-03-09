@@ -1,9 +1,23 @@
 .filter-list {
   overflow-y: auto;
   list-style: none;
-  height: calc(100vh - 340px);
   padding: 0;
+  flex: 1;
 
+  &::-webkit-scrollbar {
+    width: 6px; 
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $light-300;
+    border-radius: $radius-1; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $light-400; 
+    border-radius: $radius-1; 
+  }
+  
   li {
     margin: $spacing-5 0;
     font-size: $font-size-4;
@@ -16,10 +30,6 @@
         margin-right: $spacing-4;
         width: 20px;
         height: 20px;
-      }
-
-      &::after {
-        content: '';
       }
     }
   }

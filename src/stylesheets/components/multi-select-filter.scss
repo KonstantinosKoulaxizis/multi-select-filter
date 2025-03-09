@@ -5,7 +5,11 @@
     background: $light-200;
     padding: $spacing-5;
     border-radius: $radius-3;
-    border: $spacing-05 solid $light-300;
+    border: $spacing-05 solid $light-400;
+
+  .list-container {
+    height: calc(100vh - 310px);
+    display: flex;
   }
   
   .apply-btn {
@@ -20,3 +24,4 @@
     margin-bottom: $spacing-4;
     cursor: pointer;
   }
+}
