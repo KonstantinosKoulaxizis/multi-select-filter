@@ -30,19 +30,19 @@ export const MultiSelectList = () => {
         fetchSelectedItems()
     }, [fetchSelectedItems])
 
-    if (isLoading) return <div className="empty-list">Loading...</div>
+    if (isLoading) return <div className="empty-list" data-testid="multi-select-list-loading">Loading...</div>
 
-    if (error) return <div className="empty-list">{error.message}</div>
+    if (error) return <div className="empty-list" data-testid="multi-select-list-error">{error.message}</div>
 
 
     return (
-        <div className="list-container">
+        <div className="list-container" data-testid="multi-select-list">
             {selectedItems.length > 0 && (
-                <div className="items-list">
-                <CheckboxList defaultChecked data={selectedItems} onSelect={updateSelectedItems} />
+                <div className="items-list" data-testid="multi-select-list-selected-items-list">
+                    <CheckboxList defaultChecked data={selectedItems} onSelect={updateSelectedItems} />
                 </div>
             )}
-            <div className={`items-list ${selectedItems.length > 0 && 'list-without-margin'}`}>
+            <div className={`items-list ${selectedItems.length > 0 && 'list-without-margin'}`} data-testid="multi-select-list-filtered-items-list">
                 <CheckboxList data={filteredData} onSelect={updateSelectedItems} />
             </div>
         </div>

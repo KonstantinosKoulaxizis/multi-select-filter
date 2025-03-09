@@ -12,6 +12,6 @@ export const MultiSelectSearchFilter = () => {
     )
 
     return (
-        <SearchBar query={searchQuery} setQuery={setSearchQuery} />
+        <SearchBar query={searchQuery} setQuery={setSearchQuery} data-testid="multi-select-search-filter"/>
     )
 };

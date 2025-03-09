@@ -15,14 +15,15 @@ interface Props {
  */
 export const CheckboxList: FC<Props> = ({ data, defaultChecked, onSelect }) =>
 (
-    <ul className="checkbox-list">
+    <ul className="checkbox-list" data-testid="checkbox-list">
         {data.map((item) => (
             <li key={item}>
-                <label>
+                <label data-testid={`checkbox-list-label-${item}`}>
                     <input
                         type="checkbox"
                         onChange={() => onSelect(item)}
                         defaultChecked={defaultChecked}
+                        data-testid={`checkbox-list-item-${item}`}
                     />
                     {item}
                 </label>

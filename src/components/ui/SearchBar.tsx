@@ -18,12 +18,13 @@ interface Props {
 */
 export const SearchBar: FC<Props> = ({ query, placeholder, setQuery }) => {
     return (
-        <div className="search-bar">
+        <div className="search-bar" data-testid="search-filter-input-container">
             <input
                 type="text"
                 placeholder={placeholder || DEFAULT_PLACEHOLDER}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
+                data-testid="search-filter-input"
             />
 
             <img src={searchIcon} alt="Zoeken" className="search-icon" />
