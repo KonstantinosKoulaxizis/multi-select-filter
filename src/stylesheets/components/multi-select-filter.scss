@@ -7,21 +7,50 @@
     border-radius: $radius-3;
     border: $spacing-05 solid $light-400;
 
-  .list-container {
-    height: calc(100vh - 310px);
-    display: flex;
-  }
-  
-  .apply-btn {
-    background: $primary-200;
-    color: $light-100;
-    border: none;
-    padding: $spacing-4;
-    width: 100%;
-    margin-top: $spacing-2;
-    border-radius: $radius-2;
-    font-size: $font-size-4;
-    margin-bottom: $spacing-4;
-    cursor: pointer;
-  }
+    .list-container {
+        max-height: calc(100vh - 310px);
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 6px; 
+          }
+        
+          &::-webkit-scrollbar-track {
+            background: $light-300;
+            border-radius: $radius-1; 
+            margin: $spacing-5 0;
+
+          }
+        
+          &::-webkit-scrollbar-thumb {
+            background: $light-400; 
+            border-radius: $radius-1; 
+          }
+
+        .items-list {
+            flex-shrink: 0; 
+            overflow: visible;
+        }
+
+        .list-without-margin {
+            margin-top: -20px;
+        }
+    }
+
+    
+
+    .apply-btn {
+        background: $primary-200;
+        color: $light-100;
+        border: none;
+        padding: $spacing-4;
+        width: 100%;
+        margin-top: $spacing-2;
+        border-radius: $radius-2;
+        font-size: $font-size-4;
+        margin-bottom: $spacing-4;
+        cursor: pointer;
+    }
 }

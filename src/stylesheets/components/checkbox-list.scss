@@ -2,20 +2,7 @@
   overflow-y: auto;
   list-style: none;
   padding: 0;
-
-  &::-webkit-scrollbar {
-    width: 6px; 
-  }
-
-  &::-webkit-scrollbar-track {
-    background: $light-300;
-    border-radius: $radius-1; 
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: $light-400; 
-    border-radius: $radius-1; 
-  }
+  margin: 0;
   
   li {
     margin: $spacing-5 0;
