@@ -1,3 +1,5 @@
+$list-height: calc(100vh - 310px);
+
 .multi-select-filter {
     width: 100%;
     min-width: 300px;
@@ -8,7 +10,7 @@
     border: $spacing-05 solid $light-400;
 
     .list-container {
-        max-height: calc(100vh - 310px);
+        height: $list-height;
         display: flex;
         flex-direction: column;
         overflow-y: auto;
@@ -39,7 +41,13 @@
         }
     }
 
-    
+    .empty-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: $list-height;
+        font-size: $font-size-4;
+    }
 
     .apply-btn {
         background: $primary-200;
