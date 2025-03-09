@@ -3,6 +3,8 @@ import { FC } from "react";
 interface Props {
     /** An array of strings representing the checkbox items. */
     data: string[];
+    /** An optional boolean to set the default checked state of the checkboxes. */
+    defaultChecked?: boolean;
     /** A callback function that will be called when a checkbox is selected. */
     onSelect: (item: string) => void;
 }
@@ -11,7 +13,7 @@ interface Props {
  * The `CheckboxList` component renders a list of checkboxes based on the `data` prop.
  * Each checkbox represents an item, and when clicked, the `onSelect` callback is fired.
  */
-export const CheckboxList: FC<Props> = ({ data, onSelect }) =>
+export const CheckboxList: FC<Props> = ({ data, defaultChecked, onSelect }) =>
 (
     <ul className="checkbox-list">
         {data.map((item) => (
@@ -20,6 +22,7 @@ export const CheckboxList: FC<Props> = ({ data, onSelect }) =>
                     <input
                         type="checkbox"
                         onChange={() => onSelect(item)}
+                        defaultChecked={defaultChecked}
                     />
                     {item}
                 </label>
