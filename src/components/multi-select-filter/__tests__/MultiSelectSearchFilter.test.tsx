@@ -18,19 +18,19 @@ vi.mock("../../../state", () => ({
 
 describe("MultiSelectSearchFilter", () => {
 
-    it("renders the SearchBar component", () => {
+    it("should renders the SearchBar component", () => {
         renderWithQueryClient(<MultiSelectSearchFilter />);
         const searchBar = screen.getByTestId("multi-select-search-filter");
         expect(searchBar).toBeInTheDocument();
     });
 
-    it("passes the correct query to the SearchBar", () => {
+    it("should passes the correct query to the SearchBar", () => {
         renderWithQueryClient(<MultiSelectSearchFilter />);
         const searchBarInput = screen.getByTestId("search-filter-input");
         expect(searchBarInput).toHaveValue(MOCK_SEARCH_QUERY);
     });
 
-    it("calls setSearchQuery when the query changes", async () => {
+    it("should calls setSearchQuery when the query changes", async () => {
         renderWithQueryClient(<MultiSelectSearchFilter />);
         const searchBarInput = screen.getByTestId("search-filter-input");
 
