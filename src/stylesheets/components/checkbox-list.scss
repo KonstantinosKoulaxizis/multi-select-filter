@@ -3,7 +3,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  
+
   li {
     margin: $spacing-5 0;
     font-size: $font-size-4;
@@ -11,12 +11,21 @@
     label {
       display: flex;
       align-items: center;
+      cursor: pointer;
 
       input {
         margin-right: $spacing-4;
         width: 20px;
         height: 20px;
       }
+
+      .checkbox-label {
+        transition: color 0.3s ease;
+      }
+    }
+
+    input:checked + .checkbox-label {
+      color: $primary-200;
     }
   }
 }
